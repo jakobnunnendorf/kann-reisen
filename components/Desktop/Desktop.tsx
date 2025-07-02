@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import NavBar from "./NavBar/NavBar";
-// import { Banner } from "./Banner/Banner";
+import NavBar from "../NavBar/NavBar";
+import Banner from "./Banner/Banner";
 // import { Gallery } from "./Gallery/Gallery";
 // import AboutUs from "./AboutUs/AboutUs";
 // import { DividerA } from "./DividerA/DividerA";
@@ -12,7 +12,8 @@ const Desktop: React.FC = () => {
   return (
     <div id="desktop-page">
       <NavBar />
-      {/* <Banner />
+      <Banner />
+      {/*
       <DividerA />
       <Gallery />
       <DividerB />
