@@ -1,0 +1,32 @@
+:root{
+    --border-black: rgba(0, 0, 0, 0.1);
+    --border-style: solid;
+}
+.divider-section{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 30vh;
+}
+.upperBar{
+    width: 100%;
+    height: 50%;
+    background-color: white;
+}
+.lowerBar{
+    width: 100%;
+    height: 50%;
+    background-color: #e8f7ff7b;
+    border-top: var(--border-black) var(--border-style) 1px;
+}
+.arrow{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(45deg);
+    height: 7vh;
+    aspect-ratio: 1;
+    background-color: white;
+    border-bottom: var(--border-black) var(--border-style) 1px;
+    border-right: var(--border-black) var(--border-style) 1px;
+}

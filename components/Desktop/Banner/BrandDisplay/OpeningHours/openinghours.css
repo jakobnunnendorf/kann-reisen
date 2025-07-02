@@ -1,0 +1,16 @@
+
+.opening-hours h4{
+    margin: 7vh 0 1vh 0;
+    text-align: center;
+    font-size: 1.1em;
+}
+.opening-hours table{
+    border-spacing: 3vw 0;
+}
+.opening-hours .weekdays{
+    font-weight: bold;
+    font-size: 1em;
+}
+.opening-hours .operating-hours{
+    font-size: 0.9em;
+}

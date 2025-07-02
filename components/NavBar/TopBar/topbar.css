@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.logo-bar{
+    position: relative;
+
+    height: 12vh;
+}

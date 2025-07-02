@@ -1,0 +1,30 @@
+:root{
+    --border-black: rgba(0, 0, 0, 0.1);
+    --border-style: solid;
+}
+.divider-sectionB{
+    position: relative;
+    width: 100%;
+    height: 30vh;
+}
+.upperBarB{
+    width: 100%;
+    height: 50%;
+    background-color: #e8f7ff7b;}
+.lowerBarB{
+    width: 100%;
+    height: 50%;
+    background-color: orange;
+    border-top: var(--border-black) var(--border-style) 1px;
+}
+.arrowB{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(45deg);
+    height: 7vh;
+    aspect-ratio: 1;
+    background-color: #f6fafc;
+    border-bottom: var(--border-black) var(--border-style) 1px;
+    border-right: var(--border-black) var(--border-style) 1px;
+}

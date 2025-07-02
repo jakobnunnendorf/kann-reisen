@@ -1,0 +1,35 @@
+.offer-display{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    margin: 0 2vw;
+
+    width: 40vw;
+    height: 80%;
+}
+.offer-heading{
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: 900;
+}
+
+@media screen and (max-width: 600px) {
+    .offer-display{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        
+        width: 80vw;
+        height: 80%;
+    }
+    .offer-heading{
+        font-size: 1.4em;
+        text-align: center;
+        font-weight: 900;
+        margin-bottom: 3vh;
+        text-align: center;
+    }
+}

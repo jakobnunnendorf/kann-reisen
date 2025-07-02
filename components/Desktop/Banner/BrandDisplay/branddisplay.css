@@ -1,0 +1,29 @@
+.brand-display{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    margin: 0 2vw;
+
+    width: 40vw;
+    height: 80%;
+}
+
+@media screen and (max-width: 600px) {
+    .brand-display{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        position: relative;
+    
+        margin: 10vh 0;
+    
+        width: 100vw;
+        height: fit-content;
+    }
+}
