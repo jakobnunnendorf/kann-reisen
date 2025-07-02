@@ -4,6 +4,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
+import emailjs from "@emailjs/browser";
+import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -50,21 +52,60 @@ const FormSchema = z.object({
 export function ContactForm() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
+    defaultValues: {
+      name: "",
+      tel: "",
+      email: "",
+      message: "",
+    },
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  function onSubmit(data: z.infer<typeof FormSchema>) {
-    toast("Wir melden uns zeitnah bei Ihnen zurück!", {
-      description: (
-        <div className="mt-2">
-          <p className="font-medium">Ihre Kontaktdaten:</p>
-          <ul className="list-disc list-inside mt-1 space-y-1">
-            <li>Name: {data.name}</li>
-            <li>E-Mail: {data.email}</li>
-            <li>Telefon: {data.tel}</li>
-          </ul>
-        </div>
-      ),
-    });
+  async function onSubmit(data: z.infer<typeof FormSchema>) {
+    setIsSubmitting(true);
+
+    try {
+      // Replace these with your actual EmailJS credentials
+      const templateParams = {
+        from_name: data.name,
+        from_email: data.email,
+        from_phone: data.tel,
+        message: data.message,
+        to_name: "Kann Reisen Team", // Your business name
+      };
+
+      const result = await emailjs.send(
+        "service_833on0a", // Replace with your EmailJS service ID
+        "template_46hgr4s", // Replace with your EmailJS template ID
+        templateParams,
+        "eTwfo3WVJ4RX6Rlz6" // Replace with your EmailJS public key
+      );
+
+      if (result.status === 200) {
+        toast.success("Nachricht erfolgreich gesendet!", {
+          description: (
+            <div className="mt-2">
+              <p className="font-medium">Ihre Kontaktdaten:</p>
+              <ul className="list-disc list-inside mt-1 space-y-1">
+                <li>Name: {data.name}</li>
+                <li>E-Mail: {data.email}</li>
+                <li>Telefon: {data.tel}</li>
+              </ul>
+            </div>
+          ),
+        });
+
+        // Reset form after successful submission
+        form.reset();
+      }
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      toast.error(
+        "Fehler beim Senden der Nachricht. Bitte versuchen Sie es später erneut."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -149,8 +190,9 @@ export function ContactForm() {
           <Button
             type="submit"
             className="text-main-green text-2xl bg-white border border-main-green rounded-md px-4 py-2 hover:bg-main-green hover:text-white"
+            disabled={isSubmitting}
           >
-            Senden
+            {isSubmitting ? "Wird gesendet..." : "Senden"}
           </Button>
         </div>
       </form>
