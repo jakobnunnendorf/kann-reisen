@@ -1,6 +1,6 @@
 import React from "react";
-import { SubBar } from "./SubBar/SubBar";
-import { TopBar } from "./TopBar/TopBar";
+import SubBar from "./SubBar/SubBar";
+import TopBar from "./TopBar/TopBar";
 import "./NavBar.css";
 
 const NavBar: React.FC = () => {
