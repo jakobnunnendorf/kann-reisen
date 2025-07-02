@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    z-index: 300;
+
+    height: 16vh;
+    width: 100%;
+}

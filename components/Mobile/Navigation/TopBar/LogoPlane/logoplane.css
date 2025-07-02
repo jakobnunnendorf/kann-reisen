@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.logo-bar .logo{
+    position: absolute;
+    top: 50%;
+    left: 3vw;
+    transform: translate(0,-50%);
+    z-index: 2;
+
+    width: 20vw;
+}
+
+.stick{
+    position: absolute;
+    top: 50%;
+    left: 23vw;
+    transform: translate(0,-50%);
+    z-index: 2;
+
+    width: 20vw;
+    height: 1px;
+
+    background-color: darkgray;
+}
+
+.airplane{
+    position: absolute;
+    top: 50%;
+    left: 43vw;
+    transform: translate(0,-50%);
+    z-index: 2;
+
+    width: 3vw;
+}

@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.offers h4{
+    align-self: flex-start;
+}
+.offers ul{
+    display: flex;
+    flex-direction: column;
+}
+.offers li{
+    margin: 0;
+	padding: 1vw 0 1vw 40px;
+	list-style: none;
+	background-image: url("./airplane-icon.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 2vw;
+}

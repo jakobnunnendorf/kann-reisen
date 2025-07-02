@@ -1,0 +1,20 @@
+:root{
+    --alpha-black: rgba(0, 0, 0, 0.7);
+}
+.contactLine{
+    text-align: center;
+    margin-top: 5vh;
+    font-size: 0.9em;
+    color: var(--alpha-black);
+    font-weight: 600;
+}
+.contactLine a{
+    color: var(--alpha-black);
+}
+.contactLine .openingHours{
+    color: black;
+}
+.contactLine .openingHours .title{
+    font-weight: 900;
+    font-size: 1.1em;
+}

@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.menu-bar .navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 50vw;
+
+    list-style: none;
+    font-weight: bold;
+    color: rgba(39, 39, 39, 0.93);
+}

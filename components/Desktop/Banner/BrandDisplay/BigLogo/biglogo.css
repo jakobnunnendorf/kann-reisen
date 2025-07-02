@@ -1,0 +1,27 @@
+.logo-section{
+    text-align: center;
+    margin-bottom: 1vh;
+}
+.logo-section .banner-logo{
+    width: 35vw;
+}
+.logo-section h3{
+    color: rgb(220, 138, 6);
+    font-size: 1.7em;
+    font-weight: 900;
+}
+
+@media screen and (max-width: 600px) {
+    .logo-section{
+        text-align: center;
+        margin-bottom: 1vh;
+    }
+    .logo-section .banner-logo{
+        width: 80vw;
+    }
+    .logo-section h3{
+        color: rgb(220, 138, 6);
+        font-size: 1.7em;
+        font-weight: 900;
+    }
+}

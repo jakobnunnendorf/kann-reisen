@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 30vw;
+
+    list-style: none;
+    font-weight: bold;
+    color: rgba(39, 39, 39, 0.93);
+}
+.navbar li{
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 600px) {
+    .navbar{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    
+        width: 100vw;
+    
+        list-style: none;
+        font-weight: bold;
+        color: rgba(39, 39, 39, 0.93);
+    }
+    .navbar li{
+        cursor: pointer;
+    }
+}
