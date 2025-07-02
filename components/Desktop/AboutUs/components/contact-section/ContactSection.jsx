@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import Form from "./Form";
+import Info from "./Info";
 
-import Form from './Form'
-import Info from './Info'
-
-import './contact-section.css'
+import "./contact-section.css";
 
 const ContactSection = () => (
   <>
@@ -12,6 +11,6 @@ const ContactSection = () => (
       <Info />
     </div>
   </>
-)
+);
 
-export default ContactSection
+export default ContactSection;

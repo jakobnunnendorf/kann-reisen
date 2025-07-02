@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import GoogleMapReact from "google-map-react";
 import { Icon } from "@iconify/react";
@@ -6,6 +8,8 @@ import "./map.css";
 
 interface LocationPinProps {
   text: string;
+  lat: number;
+  lng: number;
 }
 
 const LocationPin: React.FC<LocationPinProps> = ({ text }) => (

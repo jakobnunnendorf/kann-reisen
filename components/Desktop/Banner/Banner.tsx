@@ -3,7 +3,7 @@ import "./Banner.css";
 import { BrandDisplay } from "./BrandDisplay/BrandDisplay";
 import { OfferDisplay } from "./OfferDisplay/OfferDisplay";
 
-const Banner = () => {
+const Banner: React.FC = () => {
   return (
     <article className="banner-window" id="banner">
       <BrandDisplay />
