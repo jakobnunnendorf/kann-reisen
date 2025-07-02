@@ -1,3 +1,5 @@
-export default function ContactPage() {
-  return <div>Contact</div>;
+import AboutUs from "@/components/Desktop/AboutUs/AboutUs";
+
+export default function KontaktPage() {
+  return <AboutUs />;
 }

@@ -1,3 +1,5 @@
+import { Gallery } from "@/components/Desktop/Gallery/Gallery";
+
 export default function GalleriePage() {
-  return <div>Gallerie</div>;
+  return <Gallery />;
 }
